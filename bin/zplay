@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+"""zplay launcher."""
+import os
+import sys
+
+_here = os.path.dirname(os.path.abspath(os.path.realpath(__file__)))
+for cand in (os.path.dirname(_here), "/usr/lib/zplay",
+             os.path.expanduser("~/.local/lib/zplay")):
+    if os.path.isdir(os.path.join(cand, "zplay")) and cand not in sys.path:
+        sys.path.insert(0, cand)
+
+from zplay.cli import main  # noqa: E402
+
+if __name__ == "__main__":
+    sys.exit(main())
