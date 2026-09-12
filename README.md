@@ -1,4 +1,4 @@
-# ◉ ゼットプレイ — zplay
+# zplay
 
 A very light, retro-Japanese **terminal music deck** for Arch Linux.
 Pure Python + stdlib for the UI (no TUI framework), `mpv` for audio,
@@ -32,15 +32,15 @@ First launch asks for a music folder (with tab completion).
 
 ## The three screens
 
-**1 · ディスク DISC** — a rotating vinyl rendered with truecolour half-block
+**1 · DISC** — a rotating vinyl rendered with truecolour half-block
 pixels. With no image it shows a vector *skeleton* label (dashed rings +
 music-note glyph). Add images and they are mapped onto the label and spin
 with the record. Transport row: `【<<】 【||】 【>>】`.
 
-**2 · ハレツ VIZ** — frequency bars from a cached one-pass ffmpeg analysis
+**2 · VIZ** — frequency bars from a cached one-pass ffmpeg analysis
 (64 log-spaced bands, 20 fps), with peak caps and optional mirroring.
 
-**3 · セッテイ CONF** — settings: music folders, images, disk style, rotation,
+**3 ·   CONF** — settings: music folders, images, disk style, rotation,
 theme, effects, shuffle/repeat, volume, fps. `↑↓` move, `←→` change, `↵` apply.
 
 ## Keys
@@ -98,14 +98,3 @@ zplay next
 
 `zplay themes` prints live swatches.
 
-## Extra touches
-
-- beat-reactive disc pulse
-- sakura petal rain overlay
-- glow sheen + vinyl groove grain on the record
-- peak caps and mirrored bars
-- zen mode, ASCII-only mode for minimal terminals
-- spectrum cache in `~/.cache/zplay` so each track is analysed once
-
-Config lives in `~/.config/zplay/config.json`, images are copied to
-`~/.local/share/zplay/images`.
